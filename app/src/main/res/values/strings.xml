@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">jokenpo2</string>
+    <string name="button_start">Inicio do Jogo</string>
+    <string name="open_text">Bem vindo ao</string>
+    <string name="game_name">Jokenpô</string>
+    <string name="menu_save_title">Salvar</string>
+    <string name="drawer_home_title">home</string>
+    <string name="menu_settings_title">Configurações</string>
+    <string name="nav_open">Abrir</string>
+    <string name="nav_close">Fechar</string>
+
+</resources>
