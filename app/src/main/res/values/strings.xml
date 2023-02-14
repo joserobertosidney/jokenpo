@@ -6,8 +6,12 @@
     <string name="game_name">Jokenpô</string>
     <string name="menu_save_title">Salvar</string>
     <string name="drawer_home_title">home</string>
-    <string name="menu_settings_title">Configurações</string>
+    <string name="menu_settings_title">Reiniciar</string>
+    <string name="menu_settings_options">Options</string>
     <string name="nav_open">Abrir</string>
     <string name="nav_close">Fechar</string>
+    <string name="botton_nav_jogador">Player</string>
+    <string name="botton_nav_resultado">Results</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
