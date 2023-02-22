@@ -3,7 +3,9 @@ package com.example.jokenpo2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.EditText
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -22,13 +24,17 @@ class GameActivity : AppCompatActivity(){
     lateinit var bottomNav : BottomNavigationView
     lateinit var navController: NavController
     lateinit var appBarConfiguration: AppBarConfiguration
+    lateinit var editText: EditText
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        Log.d("lifeCycle","onCreate")
+
         val binding = ActivityGameBinding.inflate(layoutInflater)
         val toolbar = binding.toolbarSecondActivity
+
 
         setContentView(binding.root)
         setSupportActionBar(toolbar)
@@ -36,6 +42,13 @@ class GameActivity : AppCompatActivity(){
         drawer = binding.root
         navDrawer = binding.navView
         bottomNav = binding.bottomNav
+        editText = binding.editTextTextPersonName
+
+        savedInstanceState?.getString("editTextValue")?.let {
+            editText.setText(it)
+        }
+
+
 
         val navHostFragment= supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController =  navHostFragment.navController
@@ -55,8 +68,36 @@ class GameActivity : AppCompatActivity(){
 
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString("editTextValue",editText.text.toString())
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("lyfeCycle","onResume")
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        Log.d("lyfeCycle","onStop")
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Log.d("lyfeCycle","onDestroy")
+    }
+
+
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
 
     }
+
 }
