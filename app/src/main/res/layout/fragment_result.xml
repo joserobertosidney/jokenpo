@@ -18,26 +18,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewResultsName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="O jogador xxx"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewResult"
-        app:layout_constraintStart_toStartOf="@+id/textViewResult"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Ganhou"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewResultsName"
-        app:layout_constraintStart_toStartOf="@+id/textViewResultsName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultsName" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
